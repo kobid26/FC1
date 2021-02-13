@@ -14,18 +14,18 @@ class Form{
     }
     display() {
         this.title.html("FRUIT CATCHER");
-        this.title.position(900, 80);
+        this.title.position(850, 80);
         this.title.style('font-size', '70px');
         this.title.style('color', 'red');
         this.input.position(950,400);
         this.input.style('width', '200px');
         this.input.style('height', '20px');
         this.input.style('background', 'lavender');
-        this.button.position(1000,500);
+        this.button.position(950,500);
         this.button.style('width', '200px');
         this.button.style('height', '40px');
         this.button.style('background', 'lightpink');
-        this.reset.position(900, 660);
+        this.reset.position(1000, 660);
         this.reset.style('width', '100px');
         this.reset.style('height', '30px');
         this.reset.style('background', 'lightpink');
@@ -40,7 +40,7 @@ class Form{
             player.updateCount(playerCount);
             this.greeting.html("Hello " + player.name)
             this.greeting.position(800,250);
-            this.greeting.style('color', 'white');
+            this.greeting.style('color', 'black');
             this.greeting.style('font-size', '100px');
         });
 
