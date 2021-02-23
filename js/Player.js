@@ -34,6 +34,10 @@ class Player {
             allPlayers = data.val();
         })
     }
-
+    static updatefruitsCollected(rank){
+        database.ref('/').update({
+          fruitsCollected:rank
+      })
+    }
     
 }

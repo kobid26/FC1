@@ -57,7 +57,14 @@ class Game{
                      players[index - 1].y = y;
                        players[index].visible=false;
   
-                    
+                       if(index === player.index){
+                         
+                        fill("black");
+                        textSize(25);
+                        text(allPlayers[plr].name ,x-25,y+25);
+    
+                        
+                    }
                          textSize(25);
                          fill("white");
                          text(allPlayers.player1.name + "'s Score:"+allPlayers.player1.score,50,50);
@@ -67,7 +74,7 @@ class Game{
                 
                 
                  
-
+                
                  
             
                  if (frameCount % 20 === 0) {
@@ -96,12 +103,20 @@ class Game{
                             fruitGroup.get(i).destroy();
                             player.score =player.score+1;
                             player.update();
+                          
+                         
+                                
+       
+                                
+                            
                           }
                        
                       }
                             
-                if (player.score >= 10){
+                if (player.score >= 50){
                     this.end();
+                    player.rank+=1
+                    player.updatefruitsCollected(player.rank);
                 }
                   }
                
@@ -113,6 +128,7 @@ class Game{
        fill("red");
        textSize(48);
        textFont("SegoeUI");
-       text("#Game Over Buddy#",350,300)
+       text("#Game Over Buddy😁😁#",200,300)
+       text("Your are #"+player.rank);
     }
 }
